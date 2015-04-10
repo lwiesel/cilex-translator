@@ -1,0 +1,22 @@
+{
+  "name": "lwiesel/cilex-translator",
+  "description": "The Translator provider from Silex for Cilex",
+  "keywords": ["cilex", "translator", "provider"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fabien Potencier",
+      "email": "fabien@symfony.com"
+    },
+    {
+      "name": "Laurent Wiesel",
+      "email": "wiesel.laurent@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "autoload": {
+    "psr-0": { "Cilex": "" }
+  }
+}
