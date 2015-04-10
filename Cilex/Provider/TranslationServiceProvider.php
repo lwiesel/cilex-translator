@@ -28,8 +28,8 @@ class TranslationServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
-        $app['translator'] = $app->share(function ($app) {
-            $translator = new Translator($app, $app['translator.message_selector']);
+        $app['translator'] = $app->share(function($app) {
+            $translator = new Translator('en', $app['translator.message_selector']);
 
             // Handle deprecated 'locale_fallback'
             if (isset($app['locale_fallback'])) {
@@ -50,7 +50,7 @@ class TranslationServiceProvider implements ServiceProviderInterface
             return $translator;
         });
 
-        $app['translator.message_selector'] = $app->share(function () {
+        $app['translator.message_selector'] = $app->share(function() {
             return new MessageSelector();
         });
 
